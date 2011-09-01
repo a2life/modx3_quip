@@ -1,5 +1,9 @@
 Changelog for Quip.
 
+Quip 2.1.1
+======================================
+- [#5650] Fix issue with moderated comments in certain edge situations
+
 Quip 2.1.0
 ======================================
 - [#5644] Fix issue with 2.1.0-rc1 that prevented new threads from being created
