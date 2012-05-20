@@ -86,18 +86,16 @@ class QuipLatestCommentsController extends QuipController {
                 if ($altRowCss && $alt) $commentArray['alt'] = ' '.$altRowCss;
                 $commentArray['url'] = $comment->makeUrl();
 
-                if (!empty($stripTags)) { $commentArray['body'] = strip_tags($commentArray['body']);
-
+                if (!empty($stripTags)) {
+                    $commentArray['body'] = strip_tags($commentArray['body']);
+                }
                 $commentArray['ago'] = $this->quip->getTimeAgo($commentArray['createdon']);
-
                 $output[] = $this->quip->getChunk($tpl,$commentArray);
                 $alt = !$alt;
-                }
             }
 
             $pagePlaceholders['resource'] = $commentArray['resource'];
-            $pagePlaceholders['pagetitle'] = !empty($commentArray['pagetitle']) ?
-$commentArray['pagetitle'] : '';
+            $pagePlaceholders['pagetitle'] = !empty($commentArray['pagetitle']) ? $commentArray['pagetitle'] : '';
         }
 
         $this->modx->toPlaceholders($pagePlaceholders,$placeholderPrefix);
