@@ -1,8 +1,15 @@
 Changelog for Quip.
 
+Quip 2.3.2
+======================================
+- [#8368] Enable usage of MODX tags in email tpls
+- [#8127] Fix latest comments bug due to fix in [#7660] (gh#64)
+
 Quip 2.3.1
 ======================================
-- Updated Dutch translation
+- Added Japanese translation
+- Added Czech translation
+- Added Dutch translation
 - [#7298] Fix bug where backtick is not escaped in comments
 - [#7372] Fix bug in unsubscribe notifications
 - [#7660] Fix E_NOTICE error in QuipLatestComments snippet
@@ -38,6 +45,7 @@ Quip 2.1.1
 
 Quip 2.1.0
 ======================================
+- [#4356] Add &redirectTo and &redirectToUrl parameters to QuipReply for custom redirection after posting
 - [#5644] Fix issue with 2.1.0-rc1 that prevented new threads from being created
 - Refactor Quip to be OOP, implement 'controller' classes, request handler
 - Add over 30 unit tests and 85 test assertions to Quip
