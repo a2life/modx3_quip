@@ -26,6 +26,7 @@
  *
  * @package quip
  * @subpackage build
+ * @var $modx modx provided instance
  */
 $templates = array();
 

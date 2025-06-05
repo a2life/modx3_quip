@@ -25,6 +25,7 @@
  * Quip Connector
  *
  * @package quip
+ * @var $modx
  */
 require_once dirname(dirname(dirname(dirname(__FILE__)))).'/config.core.php';
 require_once MODX_CORE_PATH.'config/'.MODX_CONFIG_KEY.'.inc.php';
