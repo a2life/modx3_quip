@@ -27,13 +27,20 @@
  * @package quip
  * @subpackage build
  */
+/**
+ * Define the MODX path constants necessary for core installation
+ *
+ * @package quip
+ * @subpackage build
+ */
+
 $tstart = microtime(true);
 set_time_limit(0);
 
 /* define package */
 define('PKG_NAME','Quip');
 define('PKG_NAME_LOWER','quip');
-define('PKG_VERSION','2.3.5');
+define('PKG_VERSION','2.3.5a');
 define('PKG_RELEASE','pl');
 
 /* define sources */
@@ -66,8 +73,9 @@ $modx->initialize('mgr');
 $modx->setLogLevel(modX::LOG_LEVEL_INFO);
 $modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML'); flush();
 
-$modx->loadClass('transport.modPackageBuilder','',false, true);
-$builder = new modPackageBuilder($modx);
+//$modx->loadClass('transport.modPackageBuilder','',false, true);
+//$builder = new modPackageBuilder($modx);
+$builder = new MODX\Revolution\Transport\modPackageBuilder($modx);
 $builder->createPackage(PKG_NAME_LOWER,PKG_VERSION,PKG_RELEASE);
 $builder->registerNamespace(PKG_NAME_LOWER,false,true,'{core_path}components/'.PKG_NAME_LOWER.'/');
 $modx->getService('lexicon','modLexicon');
