@@ -199,7 +199,7 @@ class reCaptcha {
     }
 
     /* Mailhide related code */
-    protected function aesEncrypt($val,$ky) {
+   /* protected function aesEncrypt($val,$ky) {
         if (!function_exists("mcrypt_encrypt")) {
             return $this->error($this->modx->lexicon('recaptcha.mailhide_no_mcrypt'));
         }
@@ -208,7 +208,17 @@ class reCaptcha {
         $val= $this->aesPad($val);
         return mcrypt_encrypt($enc, $ky, $val, $mode, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0");
     }
+   */
+    protected function aesEncrypt($data,$ky){
+        return  openssl_encrypt($data, "aes-128-cbc", $ky, OPENSSL_RAW_DATA, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0");
+    }
 
+
+    protected function aesDecrypt($data,$ky){
+
+
+        return  openssl_decrypt($data, "aes-128-cbc", $ky, OPENSSL_RAW_DATA, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0");
+    }
 
     protected function mailhideUrlbase64 ($x) {
         return strtr(base64_encode ($x), '+/', '-_');
