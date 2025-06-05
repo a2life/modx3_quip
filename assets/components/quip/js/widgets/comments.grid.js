@@ -130,7 +130,6 @@ Ext.extend(Quip.grid.Comments,MODx.grid.Grid,{
             value,rec.data.name,rec.data.email,rec.data.approved
         );
 
-        return value;
     }
     ,_renderUrl: function(v,md,rec) {
         return '<a href="'+rec.data.url+'" target="_blank">'+rec.data.pagetitle+'</a><br /><i>'+rec.data.comments+' '+_('quip.comments')+'</i>';
