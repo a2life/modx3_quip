@@ -55,7 +55,9 @@ $modx->loadClass('transport.modPackageBuilder','',false, true);
 echo '<pre>'; /* used for nice formatting of log messages */
 $modx->setLogLevel(modX::LOG_LEVEL_INFO);
 $modx->setLogTarget('ECHO');
-
+/**
+ * @var $properties modx provided parameter
+ */
 
 foreach (array('mysql', 'sqlsrv') as $driver) {
     $xpdo= new xPDO(

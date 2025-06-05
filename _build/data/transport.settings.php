@@ -24,6 +24,7 @@
 /**
  * @package quip
  * @subpackage build
+ * @var $modx modx provided instance
  */
 $settings = array();
 $settings['quip.emailsFrom']= $modx->newObject('modSystemSetting');

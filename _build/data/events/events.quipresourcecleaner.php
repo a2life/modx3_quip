@@ -4,6 +4,7 @@
  * 
  * @package quip
  * @subpackage build
+ * @var $modx modx provided instance
  */
 $events = array();
 

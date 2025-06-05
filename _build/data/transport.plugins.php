@@ -4,6 +4,8 @@
  * 
  * @package quip
  * @subpackage build
+7 * @var $modx
+ * @var $sources
  */
 $plugins = array();
 
