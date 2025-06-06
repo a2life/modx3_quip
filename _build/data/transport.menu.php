@@ -28,7 +28,7 @@
  * @subpackage build
  * @var $modx modx provided instance
  */
-$action= $modx->newObject('modAction');
+/*$action= $modx->newObject('modAction');
 $action->fromArray(array(
     'id' => 1,
     'namespace' => 'quip',
@@ -37,7 +37,7 @@ $action->fromArray(array(
     'haslayout' => 1,
     'lang_topics' => 'quip:default,file',
     'assets' => '',
-),'',true,true);
+),'',true,true);*/
 
 /* load menu into action */
 $menu= $modx->newObject('modMenu');
@@ -48,8 +48,10 @@ $menu->fromArray(array(
     'icon' => 'images/icons/plugin.gif',
     'menuindex' => '0',
     'params' => '',
+    'action' => 'index',
     'handler' => '',
+    'namespace' => 'quip'
 ),'',true,true);
-$menu->addOne($action);
+$menu->save();
 
-return $menu;
+return null;
