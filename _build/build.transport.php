@@ -41,7 +41,7 @@ set_time_limit(0);
 define('PKG_NAME','Quip');
 define('PKG_NAME_LOWER','quip');
 define('PKG_VERSION','2.3.5b');
-define('PKG_RELEASE','b1');
+define('PKG_RELEASE','b2');
 
 /* define sources */
 $root = dirname(dirname(__FILE__)).'/';
