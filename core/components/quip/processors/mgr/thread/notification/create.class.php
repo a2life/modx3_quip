@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadNotificationCreateProcessor extends modObjectCreateProcessor {
+class QuipThreadNotificationCreateProcessor extends \MODX\Revolution\Processors\Model\CreateProcessor {
     public $classKey = 'quipCommentNotify';
     public $languageTopics = array('quip:default');
     public $permission = 'quip.thread_view';
