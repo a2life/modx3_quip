@@ -26,7 +26,7 @@
  *
  * @package quip
  * @subpackage build
- * @var $modx modx provicded instance
+ * @var $modx modx provided instance
  */
 function bld_policyFormatData($permissions) {
     $data = array();

@@ -1,4 +1,11 @@
 Changelog for Quip.
+Quip 2.3.5b
+ - Clean up code
+ - remove m_encrypt and use open ssl encrypt for reCaptcha
+
+Quip 2.3.5a
+- merged with the fork 062e66f3 zahlenhexe <iris.hammer@zahlenhexe.de> on 3/16/2023. This was
+ originally applied to 2.3.4, to make the app work with modx3
 
 Quip 2.3.5
 - Fixes a bug where posting a second comment would not work.
