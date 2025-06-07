@@ -21,7 +21,7 @@ class QuipTestCase extends PHPUnit_Framework_TestCase {
      * Ensure all tests have a reference to the MODX and Quip objects
      */
     public function setUp() {
-        $this->modx =& QuipTestHarness::_getConnection();
+        $this->modx = QuipTestHarness::_getConnection();
         $fiCorePath = $this->modx->getOption('quip.core_path',null,$this->modx->getOption('core_path',null,MODX_CORE_PATH).'components/quip/');
         require_once $fiCorePath.'model/quip/quip.class.php';
         $this->quip = new Quip($this->modx);

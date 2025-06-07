@@ -83,7 +83,7 @@ class QuipThreadGetListProcessor extends modObjectGetListProcessor {
 
     /**
      * @param xPDOObject|quipThread $object
-     * @return boolean
+     * @return array
      */
     public function prepareRow(xPDOObject $object) {
         if (!$object->checkPolicy('view')) return false;
