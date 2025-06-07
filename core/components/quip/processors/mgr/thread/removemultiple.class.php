@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadRemoveMultipleProcessor extends \MODX\Revolution\Processors\Processor {
+class QuipThreadRemoveMultipleProcessor extends modProcessor {
     public function initialize() {
         $threads = $this->getProperty('threads');
         if (empty($threads)) {

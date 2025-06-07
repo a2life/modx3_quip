@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
- class QuipCommentRemoveMultipleProcessor extends \MODX\Revolution\Processors\Processor {
+ class QuipCommentRemoveMultipleProcessor extends modProcessor {
     public function checkPermissions() {
         return $this->modx->hasPermission('quip.comment_remove');
     }

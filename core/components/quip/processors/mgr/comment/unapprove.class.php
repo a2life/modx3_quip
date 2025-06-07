@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipCommentUnApproveProcessor extends \MODX\Revolution\Processors\ModelProcessor {
+class QuipCommentUnApproveProcessor extends modObjectProcessor {
     public $classKey = 'quipComment';
     public $permission = 'quip.comment_approve';
     public $languageTopics = array('quip:default');

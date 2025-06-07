@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadGetListProcessor extends \MODX\Revolution\Processors\Model\GetListProcessor {
+class QuipThreadGetListProcessor extends modObjectGetListProcessor {
     public $classKey = 'quipThread';
     public $primaryKeyField = 'name';
     public $objectType = 'quip.thread';

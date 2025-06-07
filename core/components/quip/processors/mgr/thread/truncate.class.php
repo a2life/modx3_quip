@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadTruncateProcessor extends \MODX\Revolution\Processors\ModelProcessor {
+class QuipThreadTruncateProcessor extends modObjectProcessor {
     public $classKey = 'quipThread';
     public $permission = 'quip.thread_view';
     public $languageTopics = array('quip:default');

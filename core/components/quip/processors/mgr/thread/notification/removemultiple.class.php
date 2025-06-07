@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadNotificationRemoveMultipleProcessor extends \MODX\Revolution\Processors\Processor {
+class QuipThreadNotificationRemoveMultipleProcessor extends modProcessor {
     public function initialize() {
         $notifications = $this->getProperty('notifications');
         if (empty($notifications)) {
