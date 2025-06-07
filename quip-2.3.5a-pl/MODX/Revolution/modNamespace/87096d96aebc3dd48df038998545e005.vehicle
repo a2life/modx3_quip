@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'quip',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => '1795b96d358737e0d6a88785db4feea4',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modNamespace',
+  'signature' => '87096d96aebc3dd48df038998545e005',
+  'native_key' => 'recaptcha',
+  'object' => '{"name":"recaptcha","path":"{core_path}components\\/recaptcha\\/","assets_path":""}',
+);

@@ -1,0 +1,17 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'resolve_files' => true,
+  'resolve_php' => true,
+  'namespace' => 'quip',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => '255d5a9c1ba8212c8cda710896f74546',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modNamespace',
+  'signature' => 'f704a69665e6756a8b046b6a8ce94180',
+  'native_key' => 'quip',
+  'object' => '{"name":"quip","path":"{core_path}components\\/quip\\/","assets_path":""}',
+);
