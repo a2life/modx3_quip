@@ -40,8 +40,8 @@ set_time_limit(0);
 /* define package */
 define('PKG_NAME','Quip');
 define('PKG_NAME_LOWER','quip');
-define('PKG_VERSION','2.3.5a');
-define('PKG_RELEASE','pl');
+define('PKG_VERSION','2.3.5');
+define('PKG_RELEASE','modx3-beta2');
 
 /* define sources */
 $root = dirname(dirname(__FILE__)).'/';
