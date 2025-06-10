@@ -1,7 +1,9 @@
 Changelog for Quip.
+
 Quip 2.3.5 - Modx3 conversion beta
 - Changes so that it would work in modx3.  No extensive testing is performed.
-- reCaptcha used in the source seems v1. it does not work with either v2 or v3 of reCaptcha. mcrypt library used is also deprecated in PHP 7.2 and above.
+- reCaptcha used in the source seems v1. it does not work with either v2 or v3 of reCaptcha. mcrypt library used is also deprecated in PHP 7.2 and above
+- v2 reCaptcha patch b ybenk-cogapp (PR#21 on modxcms/Quip)
 
 Quip 2.3.5
 - Fixes a bug where posting a second comment would not work.
