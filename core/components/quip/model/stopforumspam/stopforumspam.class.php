@@ -4,8 +4,8 @@
  * @subpackage spam
  */
 
-use Exception;
-use SimpleXMLElement;
+/* use Exception;
+use SimpleXMLElement; */
 use MODX\Revolution\modX;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
