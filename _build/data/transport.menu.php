@@ -28,30 +28,28 @@
  * @subpackage build
  * @var $modx modx provided instance
  */
-/*$action= $modx->newObject('modAction');
-$action->fromArray(array(
-    'id' => 1,
-    'namespace' => 'quip',
-    'parent' => 0,
-    'controller' => 'index',
-    'haslayout' => 1,
-    'lang_topics' => 'quip:default,file',
-    'assets' => '',
-),'',true,true);*/
 
-/* load menu into action */
+
+/* load quip menu  */
+$menu=$modx->getObject(\MODX\Revolution\modMenu::class,['text'=>'quip','action'=>'index']);
+if (is_null($menu)) {
+    $menu = $modx->newObject('modMenu');
+}
+    $fields=[
+        'parent' => 'components',
+        'text' => 'quip',
+        'description' => 'quip_desc',
+        'icon' => '<i class="fa fa-comments" aria-hidden="true"></i>',
+        'menuindex' => '0',
+        'params' => '',
+        'action' => 'index',
+        'handler' => '',
+        'namespace' => 'quip'
+    ];
+    $menu->fromArray($fields);
+    $menu->save();
+
 $menu= $modx->newObject('modMenu');
-$menu->fromArray(array(
-    'parent' => 'components',
-    'text' => 'quip',
-    'description' => 'quip_desc',
-    'icon' => 'images/icons/plugin.gif',
-    'menuindex' => '0',
-    'params' => '',
-    'action' => 'index',
-    'handler' => '',
-    'namespace' => 'quip'
-),'',true,true);
-$menu->save();
+
 
 return null;
