@@ -5,6 +5,7 @@ A commenting component for MODx Revolution
 
 ## modx3 adaptation attempt.
 ### Quip 2.3.5 - Modx3 conversion beta
-- Changes so that it would build and work in modx3.  No extensive testing is performed.
-- reCaptcha used in the source seems v1. it does not work with either v2 or v3 of reCaptcha. mcrypt library used is also deprecated in PHP 7.2 and above.
-- There is a transport package in the release, but there is no guarantee it would work in your setup.
+- Changes so that it would build and work in modx3, based on patch made by zahlenhexe. I tweaked _build part so it will compile under modx3.  No extensive testing is performed
+- reCaptcha used in the original source was for v1. There is a pull request in the modxcms/quip as pr#21 but was never pulled.  These patches were implemented. It appears to work but again no extensive test was made.
+- Does not work inside Articles (yet)  
+- There is a transport package in the release, in case you are inclined to test it by yourself.
