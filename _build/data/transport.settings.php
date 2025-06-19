@@ -27,77 +27,103 @@
  * @var $modx modx provided instance
  */
 $settings = array();
-$settings['quip.emailsFrom']= $modx->newObject('modSystemSetting');
-$settings['quip.emailsFrom']->fromArray(array(
-    'key' => 'quip.emailsFrom',
-    'value' => '',
-    'xtype' => 'textfield',
-    'namespace' => 'quip',
-    'area' => 'email',
-),'',true,true);
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'quip.emailsFrom']))){
+    $settings['quip.emailsFrom']= $modx->newObject('modSystemSetting');
+    $settings['quip.emailsFrom']->fromArray([
+            'key' => 'quip.emailsFrom',
+            'value' => '',
+            'xtype' => 'textfield',
+            'namespace' => 'quip',
+            'area' => 'email'
+        ]
+    );
 
-$settings['quip.emails_from_name']= $modx->newObject('modSystemSetting');
-$settings['quip.emails_from_name']->fromArray(array(
-    'key' => 'quip.emails_from_name',
-    'value' => 'Quip',
-    'xtype' => 'textfield',
-    'namespace' => 'quip',
-    'area' => 'email',
-),'',true,true);
+}
 
-$settings['quip.emailsTo']= $modx->newObject('modSystemSetting');
-$settings['quip.emailsTo']->fromArray(array(
-    'key' => 'quip.emailsTo',
-    'value' => '',
-    'xtype' => 'textfield',
-    'namespace' => 'quip',
-    'area' => 'email',
-),'',true,true);
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class, ['key'=>'quip.emails_from_name']))){
+    $settings['quip.emails_from_name']= $modx->newObject('modSystemSetting');
+    $settings['quip.emails_from_name']->fromArray([
+            'key' => 'quip.emails_from_name',
+            'value' => 'Quip',
+            'xtype' => 'textfield',
+            'namespace' => 'quip',
+            'area' => 'email'
+        ]
+    );
 
-$settings['quip.emailsReplyTo']= $modx->newObject('modSystemSetting');
-$settings['quip.emailsReplyTo']->fromArray(array(
-    'key' => 'quip.emailsReplyTo',
-    'value' => '',
-    'xtype' => 'textfield',
-    'namespace' => 'quip',
-    'area' => 'email',
-),'',true,true);
+}
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'quip.emailsTo']))) {
+    $settings['quip.emailsTo'] = $modx->newObject('modSystemSetting');
+    $settings['quip.emailsTo']->fromArray([
+        'key' => 'quip.emailsTo',
+        'value' => '',
+        'xtype' => 'textfield',
+        'namespace' => 'quip',
+        'area' => 'email'
+    ]);
+}
 
-$settings['quip.allowed_tags']= $modx->newObject('modSystemSetting');
-$settings['quip.allowed_tags']->fromArray(array(
-    'key' => 'quip.allowed_tags',
-    'value' => '<b><i><br>',
-    'xtype' => 'textfield',
-    'namespace' => 'quip',
-    'area' => 'Tags',
-),'',true,true);
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'quip.emailsReplyTo']))) {
+    $settings['quip.emailsReplyTo'] = $modx->newObject('modSystemSetting');
+    $settings['quip.emailsReplyTo']->fromArray([
+        'key' => 'quip.emailsReplyTo',
+        'value' => '',
+        'xtype' => 'textfield',
+        'namespace' => 'quip',
+        'area' => 'email'
+        ]
+    );
+}
 
-$settings['recaptcha.public_key']= $modx->newObject('modSystemSetting');
-$settings['recaptcha.public_key']->fromArray(array(
-    'key' => 'recaptcha.public_key',
-    'value' => '',
-    'xtype' => 'textfield',
-    'namespace' => 'recaptcha',
-    'area' => 'reCaptcha',
-),'',true,true);
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'quip.allowed_tags']))){
+    $settings['quip.allowed_tags']= $modx->newObject('modSystemSetting');
+    $settings['quip.allowed_tags']->fromArray([
+        'key' => 'quip.allowed_tags',
+        'value' => '<b><i><br>',
+        'xtype' => 'textfield',
+        'namespace' => 'quip',
+        'area' => 'Tags'
+        ]
+    );
+}
 
-$settings['recaptcha.private_key']= $modx->newObject('modSystemSetting');
-$settings['recaptcha.private_key']->fromArray(array(
-    'key' => 'recaptcha.private_key',
-    'value' => '',
-    'xtype' => 'textfield',
-    'namespace' => 'recaptcha',
-    'area' => 'reCaptcha',
-),'',true,true);
+if (is_null($modx->getObject(MODX\Revolution\modSystemSetting::class,['key'=>'recaptcha.public_key']))){
+    $settings['recaptcha.public_key']= $modx->newObject('modSystemSetting');
+    $settings['recaptcha.public_key']->fromArray(array(
+        'key' => 'recaptcha.public_key',
+        'value' => '',
+        'xtype' => 'textfield',
+        'namespace' => 'recaptcha',
+        'area' => 'reCaptcha',
+    ),'',true,true);
+}
 
-$settings['recaptcha.use_ssl']= $modx->newObject('modSystemSetting');
-$settings['recaptcha.use_ssl']->fromArray(array(
-    'key' => 'recaptcha.use_ssl',
-    'value' => false,
-    'xtype' => 'combo-boolean',
-    'namespace' => 'recaptcha',
-    'area' => 'reCaptcha',
-),'',true,true);
+if (is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'recaptcha.private_key']))){
+    $settings['recaptcha.private_key']= $modx->newObject('modSystemSetting');
+    $settings['recaptcha.private_key']->fromArray(array(
+        'key' => 'recaptcha.private_key',
+        'value' => '',
+        'xtype' => 'textfield',
+        'namespace' => 'recaptcha',
+        'area' => 'reCaptcha',
+    ),'',true,true);
+
+
+}
+
+if(is_null($modx->getObject(\MODX\Revolution\modSystemSetting::class,['key'=>'recaptcha.use_ssl']))){
+    $settings['recaptcha.use_ssl']= $modx->newObject('modSystemSetting');
+    $settings['recaptcha.use_ssl']->fromArray([
+        'key' => 'recaptcha.use_ssl',
+        'value' => false,
+        'xtype' => 'combo-boolean',
+        'namespace' => 'recaptcha',
+        'area' => 'reCaptcha'
+    ]
+
+    );
+}
+
 
 
 
