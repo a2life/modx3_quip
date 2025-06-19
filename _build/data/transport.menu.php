@@ -31,7 +31,7 @@
 
 
 /* load quip menu  */
-$menu=$modx->getObject(\MODX\Revolution\modMenu::class,['text'=>'quip','action'=>'index']);
+$menu=$modx->getObject(\MODX\Revolution\modMenu::class,['namespace'=>'quip','action'=>'index']);
 if (is_null($menu)) {
     $menu = $modx->newObject('modMenu');
 }
@@ -46,7 +46,7 @@ if (is_null($menu)) {
         'handler' => '',
         'namespace' => 'quip'
     ];
-    $menu->fromArray($fields);
+    $menu->fromArray($fields,"",true,true);
     $menu->save();
 
 $menu= $modx->newObject('modMenu');
