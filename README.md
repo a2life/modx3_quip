@@ -12,4 +12,4 @@ A commenting component for MODx Revolution
 - To make it work with Article 2.0.0pl, change article template to call properties without '!' (for example, use [[+latest_posts]] instead of [[!+latest_posts]])
 - There is a transport package in the release, in case you would like to test it by yourself.
 - QuipRss is not tested (I dont use it)
-- Threaded reply is not tested (ditto)
+
