@@ -4,7 +4,7 @@ Quip
 A commenting component for MODx Revolution
 
 ## modx3 adaptation attempt.
-### Quip 2.3.6 - Modx3 conversion beta
+### Quip 2.3.5 - Modx3 conversion beta
 - Changes so that it would build and work in modx3. This is based on patch made by <a href="https://github.com/zahlenhexe/Quip">zahlenhexe</a>. The original patch was made for 2.3.4pl.  I used 2.3.5 to apply the same patch.
 - I also tweaked _build part so the transport package will compile under modx3 install. 
 - The package appears to be working on my server environment, but no extensive testing was done.
