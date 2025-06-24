@@ -6,7 +6,7 @@ Quip.grid.Notification = function(config) {
     Ext.applyIf(config,{
         url: Quip.config.connector_url
         ,baseParams: {
-            action: 'mgr/thread/notification/getList'
+            action: 'mgr/thread/notification/getlist'
             ,thread: config.thread || null
         }
         ,fields: ['id','thread','email','createdon','cls']
