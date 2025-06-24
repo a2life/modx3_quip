@@ -16,8 +16,9 @@
         </script></head><body><div xmlns="" id="content">
 <script>
       $(document).ready(function() {
-        $('dl.function-info, dl.constant-info, dl.property-info').prev().css('cursor', 'pointer');
-        $('dl.function-info, dl.constant-info, dl.property-info').prev().click(function() {
+          const dlPropInfo=$('dl.function-info, dl.constant-info, dl.property-info');
+        dlPropInfo.prev().css('cursor', 'pointer');
+        dlPropInfo.prev().click(function() {
           if ($(this).next().is(':hidden'))
           {
             $(this).children('img')[0].src = 'images/arrow_down.gif';
@@ -27,7 +28,7 @@
           }
           $(this).next().slideToggle();
         });
-      $('dl.function-info, dl.constant-info, dl.property-info').hide();
+      dlPropInfo.hide();
       $('dl.function-info img, dl.constant-info img, dl.property-info img').show();
       });
     </script><a name="top"></a><h1 class="file">mysql/quipcomment.class.php</h1>
