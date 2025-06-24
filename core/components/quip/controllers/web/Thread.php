@@ -449,7 +449,7 @@ class QuipThreadController extends QuipController {
         foreach ($this->comments as $comment) {
             $comment->hasAuth = $this->hasAuth;
             $comment->isModerator = $this->isModerator;
-            $commentArray = $comment->prepare($this->getProperties(),$idx);
+            $commentArray = $comment->prepare($idx, $this->getProperties());
             $idx++;
             $this->setPlaceholder('pagetitle',$commentArray['pagetitle']);
             $this->setPlaceholder('resource',$commentArray['resource']);

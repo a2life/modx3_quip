@@ -108,7 +108,7 @@ class quipThread extends xPDOObject {
             }
         }
 
-        $scheme= $this->xpdo->context->getOption('scheme','',$options);
+        $scheme= $this->xpdo->context->getOption('scheme','-1',$options);
         return $this->xpdo->makeUrl($resource,$options['context_key'],$params,$scheme);
     }
 

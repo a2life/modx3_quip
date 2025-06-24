@@ -26,6 +26,8 @@
  *
  * @package quip
  * @subpackage build
+ * @var $options
+ * @var $object
  */
 $success= false;
 switch ($options[xPDOTransport::PACKAGE_ACTION]) {

@@ -1,5 +1,11 @@
 Changelog for Quip.
 
+Quip 2.3.6 for Modx3 conversion beta
+=============================================================
+- implement patch by zahlenhexe(removed modAction and modRestClient to get Quip work in 3.x)
+- v2 reCaptcha patch b ybenk-cogapp (PR#21 on modxcms/Quip)
+- Modified _build folder so that the source will compile under MODX3 install.
+
 Quip 2.3.5
 - Fixes a bug where posting a second comment would not work.
 

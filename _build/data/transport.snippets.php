@@ -24,6 +24,8 @@
 /**
  * @package quip
  * @subpackage build
+ * @var $modx
+ * @var $sources
  */
 $snippets = array();
 

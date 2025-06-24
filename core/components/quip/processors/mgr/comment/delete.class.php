@@ -25,7 +25,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipCommentDeleteProcessor extends modObjectProcessor {
+class QuipCommentDeleteProcessor extends \MODX\Revolution\Processors\ModelProcessor {
     public $classKey = 'quipComment';
     public $permission = 'quip.comment_remove';
     public $languageTopics = array('quip:default');

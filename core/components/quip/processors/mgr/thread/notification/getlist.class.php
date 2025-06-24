@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipThreadNotificationGetListProcessor extends modObjectGetListProcessor {
+class QuipThreadNotificationGetListProcessor extends \MODX\Revolution\Processors\Model\GetListProcessor {
     public $classKey = 'quipCommentNotify';
     public $objectType = 'quip.notification';
     public $languageTopics = array('quip:default');
@@ -59,7 +59,7 @@ class QuipThreadNotificationGetListProcessor extends modObjectGetListProcessor {
 
     /**
      * @param xPDOObject|quipCommentNotify $object
-     * @return boolean
+     * @return array
      */
     public function prepareRow(xPDOObject $object) {
         $notifyArray = $object->toArray();

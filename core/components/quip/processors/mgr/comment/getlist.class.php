@@ -27,7 +27,7 @@
  * @package quip
  * @subpackage processors
  */
-class QuipCommentGetListProcessor extends modObjectGetListProcessor {
+class QuipCommentGetListProcessor extends \MODX\Revolution\Processors\Model\GetListProcessor {
     public $classKey = 'quipComment';
     public $languageTopics = array('quip:default');
     public $permission = 'quip.comment_list';

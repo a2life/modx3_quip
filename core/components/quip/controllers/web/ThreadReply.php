@@ -179,15 +179,17 @@ class QuipThreadReplyController extends QuipController {
     public function getReplyForm() {
         $this->setPlaceholder('username',$this->modx->user->get('username'));
         $this->setPlaceholder('unsubscribe','');
+        if (isset($_POST['name'])){ //if page was called up from POST request ..
+            $fields = array();
+            foreach ($_POST as $k => $v) {
+                $fields[$k] = str_replace(array('[',']'),array('&#91;','&#93;'),$v);
+            }
 
-        $fields = array();
-        foreach ($_POST as $k => $v) {
-            $fields[$k] = str_replace(array('[',']'),array('&#91;','&#93;'),$v);
+            $fields['name']    = strip_tags($fields['name']);
+            $fields['email']   = strip_tags($fields['email']);
+            $fields['website'] = strip_tags($fields['website']);
+
         }
-
-        $fields['name']    = strip_tags($fields['name']);
-        $fields['email']   = strip_tags($fields['email']);
-        $fields['website'] = strip_tags($fields['website']);
 
         /* prefill fields */
         $profile = $this->modx->user->getOne('Profile');
@@ -267,7 +269,8 @@ class QuipThreadReplyController extends QuipController {
 
                 /* redirect urls for custom FURL scheme  */
                 $redirectToUrl = $this->getProperty('redirectToUrl','');
-                $redirectTo = $this->getProperty('redirectTo','');
+                $redirectTo = $this->getProperty('redirectTo',0);
+                $redirectTo=($redirectTo=='')?0:$redirectTo;
                 if (!empty($redirectToUrl)) {
                     $url = $redirectToUrl.'?'.http_build_query($params);
                 } else if (!empty($redirectTo)) {
@@ -312,7 +315,7 @@ class QuipThreadReplyController extends QuipController {
             /** @var reCaptcha $recaptcha */
             $recaptcha = $this->modx->getService('recaptcha','reCaptcha',$this->quip->config['modelPath'].'recaptcha/');
             if ($recaptcha instanceof reCaptcha) {
-                $recaptchaTheme = $this->getProperty('recaptchaTheme','clean');
+                $recaptchaTheme = $this->getProperty('recaptchaTheme','light');
                 $html = $recaptcha->getHtml($recaptchaTheme);
                 $this->modx->setPlaceholder('quip.recaptcha_html',$html);
             } else {

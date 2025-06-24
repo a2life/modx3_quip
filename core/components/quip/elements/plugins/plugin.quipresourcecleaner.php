@@ -25,6 +25,8 @@
  * Handles removal of threads if a Resource is deleted.
  * 
  * @package quip
+ * @var $modx
+ * @var $scriptProperties
  */
 $quip = $modx->getService('quip','Quip',$modx->getOption('quip.core_path',null,$modx->getOption('core_path').'components/quip/').'model/quip/',$scriptProperties);
 if (!($quip instanceof Quip)) return;

@@ -112,7 +112,7 @@ class quipComment extends xPDOSimpleObject {
             }
         }
 
-        $scheme= $this->xpdo->context->getOption('scheme','',$options);
+        $scheme= $this->xpdo->context->getOption('scheme','-1',$options);
         $idprefix = $this->xpdo->context->getOption('idprefix',$this->get('idprefix'),$options);
         return $this->xpdo->makeUrl($resource,$options['context_key'],$params,$scheme).($addAnchor ? '#'.$idprefix.$this->get('id') : '');
     }
@@ -406,7 +406,7 @@ class quipComment extends xPDOSimpleObject {
      * @param int $idx
      * @return array
      */
-    public function prepare(array $properties = array(),$idx) {
+    public function prepare($idx, array $properties = array()) {
         $alt = $idx % 2;
         $commentArray = $this->toArray();
         $commentArray['children'] = '';
@@ -505,7 +505,9 @@ class quipComment extends xPDOSimpleObject {
                 $params = $this->xpdo->request->getParameters();
                 $params['quip_thread'] = $this->get('thread');
                 $params['quip_parent'] = $this->get('id');
-                $commentArray['replyUrl'] = $this->xpdo->makeUrl($this->getOption('replyResourceId',$properties,1),'',$params);
+                $replyResourceId=$this->getOption('replyResourceId',$properties);
+                if (empty($replyResourceId)) {$replyResourceId=1;}
+                $commentArray['replyUrl'] = $this->xpdo->makeUrl($replyResourceId,'',$params);
             }
         } else {
             $commentArray['replyUrl'] = '';

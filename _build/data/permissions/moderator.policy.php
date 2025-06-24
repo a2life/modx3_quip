@@ -26,6 +26,7 @@
  *
  * @package quip
  * @subpackage build
+ * @var $modx modx provided instance
  */
 $permissions = array();
 $permissions[] = $modx->newObject('modAccessPermission',array(

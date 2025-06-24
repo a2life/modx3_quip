@@ -26,6 +26,8 @@
  *
  * @package quip
  * @subpackage build
+ * @var $options
+ * @var $modx
  */
 /* set some default values */
 $values = array(

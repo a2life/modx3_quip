@@ -7,6 +7,8 @@ require_once strtr(realpath(dirname(__FILE__)) . '/QuipTestCase.php','\\','/');
  * Main Quip test harness.
  *
  * @package quip-test
+ *
+ *
  */
 class QuipTestHarness {
     /**
@@ -34,8 +36,11 @@ class QuipTestHarness {
      * 
      * @param array $options An array of configuration parameters.
      * @return xPDO An xPDO object instance.
+     *
+     *
      */
     public static function _getConnection($options = array()) {
+        global $config;
         $modx = QuipTestHarness::$modx;
         if (is_object($modx)) {
             if (!$modx->request) { $modx->getRequest(); }
